@@ -2,30 +2,29 @@
   <h1 class="titulo">Perfil</h1>
   <div class="imgPerfil">
     <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
-    <img src="{{profile.picture}}">
+    <img class="imgUtilizador" src="{{profile.picture}}">
   </pre>
   </div>
   <div class="InfoPerfil">
-    <p class="textos">Nome:</p>
+    <p class="textos">Nome</p>
     <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
-    <code>{{ profile.name | json }}</code>
+    <code>{{profile.name}}</code>
   </pre>
-    <p class="textos">Nome de Utilizador:</p>
+    <p class="textos">Nome de Utilizador</p>
     <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
-    <code>{{ profile.nickname | json }}</code>
+    <code>{{profile.nickname}}</code>
   </pre>
-    <p class="textos">E-mail:</p>
+    <p class="textos">E-mail</p>
     <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
-    <code>{{ profile.email | json }}</code>
+    <code>{{profile.email}}</code>
   </pre>
-    <p class="textos">Verificação de E-mail:</p>
+    <p class="textos">Verificação de E-mail</p>
     <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
-    <code>{{ profile.email_verified | json }}</code>
+    <code>{{profile.email_verified}}</code>
   </pre>
-    <p class="textos">Atualizado em:</p>
+    <p class="textos">Atualizado em</p>
     <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
-    <code>{{ profile.updated_at | json }}</code>
+    <code>{{profile.updated_at}}</code>
   </pre>
-    <p class="textos">Palavra-Passe:</p>
   </div>
 </div>
