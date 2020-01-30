@@ -1,26 +1,10 @@
 .navbar {
-  background-color: rgb(214, 253, 236);
+  background-color: #3C997E;
   height: 100px;
 }
 
-/*.botoesmenu {
-  background-color: rgb(158, 255, 206);
-  width: max-content;
-  height: 50px;
-  color: rgb(90, 90, 90);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  border: none;
-  //border-radius: 5px;
-  //border-width: 0.5px;
-  //border-color: rgb(90, 90, 90);
-  //border-style: solid;
-  margin: 5px;
-  cursor: pointer;
-}*/
-
 .button {
-  background-color: rgb(158, 255, 206);
+  background-color: #ACE8C6;
   border: none;
   color: white;
   padding: 16px 32px;
@@ -35,8 +19,9 @@
 }
 
 .btnmenu {
-  background-color: rgb(158, 255, 206);
+  background-color: #ACE8C6;
   border: none;
+  border-radius: 5px;
   color: rgb(90, 90, 90);
   width: max-content;
   font-family: Arial, Helvetica, sans-serif;
