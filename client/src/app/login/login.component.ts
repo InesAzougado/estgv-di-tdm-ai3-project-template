@@ -25,8 +25,10 @@ export class LoginComponent implements OnInit {
       
       username:"",
       password:""
+      //const loginReq1 = userForm.value as LoginRequest chamar os dados dos campos dos formulários
 
     };
+   
     this.accountService.accountLoginPost(loginReq).subscribe()
   
   } 

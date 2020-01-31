@@ -1,5 +1,4 @@
 import { UserService } from 'src/app/services/user.service';
-
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -12,9 +11,9 @@ import { Router } from '@angular/router';
 })
 export class UserCreateComponent implements OnInit {
 
-  userForm = this.formBuilder.group({
+  userForm = this.formBuilder.group({// definir os campos do formulario
     name: [null, [Validators.required, Validators.maxLength(50)]],
-    email: [null, [Validators.required, Validators.email, Validators.maxLength(50)]],
+    pass: [null, [Validators.required, Validators.email, Validators.maxLength(50)]],
   });
 
   /**
@@ -41,7 +40,7 @@ export class UserCreateComponent implements OnInit {
     if (!this.userForm.dirty || !this.userForm.valid) {
       return;
     }
-    const createData: Api.IUserCreateData = this.userForm.value;
+    const createData: Api.IUserCreateData = this.userForm.value; // { name: "", xxx: ""}
     this.snackBar.open(`Creating user ${createData.name}.`);
     this.userService.createUser(createData).subscribe({
       next: this.handleUserCreateSuccess.bind(this),
