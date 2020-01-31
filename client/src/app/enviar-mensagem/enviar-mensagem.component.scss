@@ -12,7 +12,7 @@
 .btnenviar {
   background-color: rgb(255, 255, 255);
   color: rgb(90, 90, 90);
-  border: 2px solid rgb(158, 255, 206);
+  border: 2px solid #ACE8C6;
   width: 100px;
   height: 50px;
   -webkit-transition-duration: 0.3s;
@@ -22,14 +22,14 @@
 }
 
 .btnenviar:hover {
-  background-color: rgb(158, 255, 206);
+  background-color: #ACE8C6;
   color: rgb(90, 90, 90);
 }
 
 .btncancelar {
   background-color: rgb(255, 255, 255);
   color: rgb(90, 90, 90);
-  border: 2px solid rgb(158, 255, 206);
+  border: 2px solid #ACE8C6;
   width: 100px;
   height: 50px;
   margin-left: 10px;
@@ -39,21 +39,21 @@
 }
 
 .btncancelar:hover {
-  background-color: rgb(158, 255, 206);
+  background-color: #ACE8C6;
   color: rgb(90, 90, 90);
 }
 
 .MargensCaixas {
   width: 370px;
   height: 25px;
-  border: 1px solid rgb(184, 184, 184);
+  border: 1px solid #ACE8C6;
 }
 
 .MargensCaixaMensagem {
-  border: 1px solid rgb(184, 184, 184);
+  border: 1px solid #ACE8C6;
 }
 
-textarea{
+textarea {
   padding-left: 10px;
   padding-top: 5px;
   outline: none;
@@ -64,7 +64,7 @@ textarea{
   color: rgb(90, 90, 90);
 }
 
-input{
+input {
   outline: none;
   padding-left: 10px;
 }

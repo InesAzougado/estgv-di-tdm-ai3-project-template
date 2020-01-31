@@ -1,28 +1,30 @@
 <div class="divprincipal">
   <h1 class="titulo">Perfil</h1>
-  <p class="textos">Nome:</p>
-  <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
-    <code>{{ profile.name | json }}</code>
+  <div class="imgPerfil">
+    <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
+    <img class="imgUtilizador" src="{{profile.picture}}">
   </pre>
-  <p class="textos">Nome de Utilizador:</p>
-  <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
-    <code>{{ profile.nickname | json }}</code>
+  </div>
+  <div class="InfoPerfil">
+    <p class="textos">Nome</p>
+    <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
+    <code>{{profile.name}}</code>
   </pre>
-  <p class="textos">Foto:</p>
-  <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
-    <img src="{{profile.picture}}">
+    <p class="textos">Nome de Utilizador</p>
+    <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
+    <code>{{profile.nickname}}</code>
   </pre>
-  <p class="textos">E-mail:</p>
-  <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
-    <code>{{ profile.email | json }}</code>
+    <p class="textos">E-mail</p>
+    <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
+    <code>{{profile.email}}</code>
   </pre>
-  <p class="textos">Verificação de E-mail:</p>
-  <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
-    <code>{{ profile.email_verified | json }}</code>
+    <p class="textos">Verificação de E-mail</p>
+    <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
+    <code>{{profile.email_verified}}</code>
   </pre>
-  <p class="textos">Atualizado em:</p>
-  <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
-    <code>{{ profile.updated_at | json }}</code>
+    <p class="textos">Atualizado em</p>
+    <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
+    <code>{{profile.updated_at}}</code>
   </pre>
-  <p class="textos">Palavra-Passe:</p>
+  </div>
 </div>
