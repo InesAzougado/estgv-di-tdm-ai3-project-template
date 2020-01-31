@@ -19,7 +19,6 @@ import { Configuration, ConfigurationParameters } from './api-client/configurati
 import { BASE_PATH } from './api-client/variables';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginFormComponent } from './login-form/login-form.component';
 import { MaterialLayoutComponent } from './material-layout/material-layout.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -43,7 +42,6 @@ function buildApiConfiguration() {
   declarations: [
     AppComponent,
     MaterialLayoutComponent,
-    LoginFormComponent,
     NavBarComponent,
     ProfileComponent,
     LoginComponent,
