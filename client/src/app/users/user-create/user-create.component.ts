@@ -40,7 +40,7 @@ export class UserCreateComponent implements OnInit {
     if (!this.userForm.dirty || !this.userForm.valid) {
       return;
     }
-    const createData: Api.IUserCreateData = this.userForm.value; // { name: "", xxx: ""}
+    const createData: Api.IUserCreateData = this.userForm.value; // { name: "", xxx: ""} vai retornar os dados do form
     this.snackBar.open(`Creating user ${createData.name}.`);
     this.userService.createUser(createData).subscribe({
       next: this.handleUserCreateSuccess.bind(this),
