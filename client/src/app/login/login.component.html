@@ -5,7 +5,7 @@
     <p><input type="password" name="pass" class="MargensCaixas" matInput placeholder="Palavra pass"
         formControlName="pass">
     </p>
-    <div class="g-recaptcha" data-sitekey="6Ld9pdUUAAAAAF8kZHK66smeEKL21ZzmH7zgyUdE"></div>
+    <re-captcha (resolved)="resolved($event)" sitekey="6Ld9pdUUAAAAAF8kZHK66smeEKL21ZzmH7zgyUdE"></re-captcha>
     <button class="btnenviar" type="submit" (click)="doLogin()">Login</button>
   </form>
 </div>

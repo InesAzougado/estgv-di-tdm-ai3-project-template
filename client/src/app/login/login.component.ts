@@ -13,9 +13,9 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  /*resolved(captchaResponse: string){
+  resolved(captchaResponse: string){
     console.log('Resolved captcha with response ${captchaResponse}:');
-  }*/
+  }
 
   userForm = this.formBuilder.group({// definir os campos do formulario
     pass: [null, [Validators.required, Validators.maxLength(50)]],

@@ -69,6 +69,7 @@ function buildApiConfiguration() {
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    RecaptchaModule.forRoot(),
     ApiModule.forRoot(buildApiConfiguration),
 
   ],
