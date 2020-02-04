@@ -32,10 +32,10 @@ declare namespace Api {
     }
 
     interface SendEmailRequest {
-        from?: string;
-        to: string;
-        subject: string;
-        message: string;
+        email: string;
+        destinatario: string;
+        assunto: string;
+        mensagem: string;
     }
     interface SupportRequest {
         email: string;

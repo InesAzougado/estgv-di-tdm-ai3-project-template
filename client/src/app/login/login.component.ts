@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit {
 
 
   userForm = this.formBuilder.group({// definir os campos do formulario
-    email: [null, [Validators.required, Validators.maxLength(50)]],
-    pass: [null, [Validators.required, Validators.email, Validators.maxLength(50)]],
+    pass: [null, [Validators.required, Validators.maxLength(50)]],
+    email: [null, [Validators.required, Validators.email, Validators.maxLength(50)]],
   });
 
   /**
