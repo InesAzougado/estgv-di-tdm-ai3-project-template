@@ -15,6 +15,6 @@ async function handleSendEmail(req: Request, res: Response) {
         .send(buildApiErrorMessage('Not implemented'));
 }
 // Register routes
-router.post('/', handleSendEmail);
+router.post('/SendEmail', handleSendEmail);
 
 export default router;
