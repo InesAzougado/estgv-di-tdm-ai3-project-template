@@ -1,19 +1,22 @@
 <div class="divprincipal">
   <h1 class="titulo">Registar Utilizador</h1>
 
-  <p class="textos">Nome:</p>
-  <input type="text" name="nome" class="MargensCaixas"><br>
-  <p class="textos">Apelido:</p>
-  <input type="text" name="apelido" class="MargensCaixas"><br>
-  <p class="textos">Nome de Utilizador:</p>
-  <input type="text" name="nomeUtilizador" class="MargensCaixas"><br>
-  <p class="textos">E-mail:</p>
-  <input type="text" name="email" class="MargensCaixas"><br>
-  <p class="textos">Palavra-Passe:</p>
-  <input type="text" name="palavraPasse" class="MargensCaixas"><br>
-  <br>
-  <input type="submit" value="Registar" class="btnsubmit">
-  <input type="submit" value="Cancelar" class="btncancelar">
-  <br>
-  <p class="textos">Clique em "Registar" para se registar como utilizador.</p>
+  <form [formGroup]="userForm" action="">
+    <p class="textos">Nome:</p>
+    <input type="text" name="nome" class="MargensCaixas" formControlName="nome"><br>
+    <p class="textos">Apelido:</p>
+    <input type="text" name="apelido" class="MargensCaixas" formControlName="apelido"><br>
+    <p class="textos">Nome de Utilizador:</p>
+    <input type="text" name="nomeUtilizador" class="MargensCaixas" formControlName="nomeUtilizador"><br>
+    <p class="textos">E-mail:</p>
+    <input type="text" name="email" class="MargensCaixas" formControlName="email"><br>
+    <p class="textos">Palavra-Passe:</p>
+    <input type="text" name="palavraPasse" class="MargensCaixas" formControlName="palavraPasse"><br>
+    <br>
+    <input type="submit" value="Registar" class="btnsubmit">
+    <input type="submit" value="Cancelar" class="btncancelar">
+    <br>
+    <p class="textos">Clique em "Registar" para se registar como utilizador.</p>
+  </form>
+
 </div>
