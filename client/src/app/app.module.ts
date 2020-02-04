@@ -27,6 +27,9 @@ import { HomeComponent } from './home/home.component';
 import { RegistarComponent } from './registar/registar.component';
 import { ContactosComponent } from './contactos/contactos.component';
 import { EnviarMensagemComponent } from './enviar-mensagem/enviar-mensagem.component';
+import { RecaptchaModule } from 'ng-recaptcha';
+
+
 /**
  * Build API configuration
  */
