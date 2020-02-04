@@ -1,8 +1,8 @@
 <div class="divprincipal">
   <form [formGroup]="userForm" action="">
     <h1 class="titulo">Login</h1>
-    <p><input type="text" name="nome" class="MargensCaixas" matInput placeholder="Email" formControlName="email"></p>
-    <p><input type="password" name="apelido" class="MargensCaixas" matInput placeholder="Palavra pass"
+    <p><input type="text" name="email" class="MargensCaixas" matInput placeholder="Email" formControlName="email"></p>
+    <p><input type="password" name="pass" class="MargensCaixas" matInput placeholder="Palavra pass"
         formControlName="pass">
     </p>
     <button class="btnenviar" type="submit" (click)="doLogin()">Login</button>
