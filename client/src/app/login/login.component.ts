@@ -36,11 +36,13 @@ export class LoginComponent implements OnInit {
 
   }
 
-  doLogin(){ //ASSOIACAO do CLICK do BTN à funçâo
-
-    const loginReq: LoginRequest = this.userForm.value as LoginRequest; //chamar os dados do formolario
-    this.accountService.accountLoginPost(loginReq).subscribe()
-  
-  } 
+  public doLogin(event: Event) {
+    const loginRequest: LoginRequest = {
+      email: "email",
+      password: "password"
+    };
+    this.accountService.accountLoginPost(loginRequest)
+    
+  }
 
 }
