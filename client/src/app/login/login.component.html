@@ -1,15 +1,18 @@
 <div class="divprincipal">
-  <form [formGroup]="userForm" action="">
+  <form [formGroup]="userForm" #declarativeForm="ngForm">
     <h1 class="titulo">Login</h1>
     <p><input type="text" name="email" class="MargensCaixas" matInput placeholder="Email" formControlName="email"></p>
     <p><input type="password" name="pass" class="MargensCaixas" matInput placeholder="Palavra pass"
         formControlName="pass">
     </p>
-    <!--<re-captcha (resolved)="resolved($event)" sitekey="6Ld9pdUUAAAAAF8kZHK66smeEKL21ZzmH7zgyUdE"></re-captcha>-->
     <br>
-    <button [disabled]="reactiveForm.invalid" class="btnenviar" type="submit" (click)="doLogin()">Login</button>
+    <form #declarativeForm="ngForm">
+      <re-captcha [(ngModel)]="declarativeFormCaptchaValue" name="captcha" required></re-captcha>
+    </form>
+    <br>
+    <button class="btnenviar" type="submit" (click)="doLogin()" [disabled]="!declarativeForm.valid">Login</button>
     <br>
     <br>
-    <re-captcha formControlName="recaptchaReactive"></re-captcha>
   </form>
+
 </div>

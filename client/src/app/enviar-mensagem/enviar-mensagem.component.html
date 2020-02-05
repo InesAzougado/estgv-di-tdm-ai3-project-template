@@ -9,12 +9,11 @@
     <p class="textos">Assunto:</p>
     <input type="text" name="assunto" class="MargensCaixas" formControlName="subject"><br>
     <p class="textos">Mensagem:</p>
-    <textarea rows="5" cols="100" name="message" class="MargensCaixaMensagem" formControlName="mensagem"></textarea><br>
+    <textarea rows="5" cols="100" name="message" class="MargensCaixaMensagem" formControlName="message"></textarea><br>
     <br>
-    <input type="submit" value="Enviar" class="btnenviar">
+    <input type="submit" value="Enviar" class="btnenviar" (click)="doSupport()">
     <input type="submit" value="Cancelar" class="btncancelar">
     <br>
     <p class="textos">Clique em "Enviar" para enviar a mensagem.</p>
   </form>
-
 </div>

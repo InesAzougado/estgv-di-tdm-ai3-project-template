@@ -15,12 +15,11 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   public version = VERSION.full;
-  public reactiveForm: FormGroup = new FormGroup({
-      recaptchaReactive: new FormControl(null, Validators.required)
-  });
+
   userForm = this.formBuilder.group({// definir os campos do formulario
     pass: [null, [Validators.required, Validators.maxLength(50)]],
     email: [null, [Validators.required, Validators.email, Validators.maxLength(50)]],
+    captcha:[null, [Validators.required]]
   });
 
   /**
