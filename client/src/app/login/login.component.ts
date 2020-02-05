@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, VERSION  } from '@angular/core';
 import { AccountService } from '../api-client/api/account.service';
 import { LoginRequest, SupportService } from '../api-client';
 import { UserService } from 'src/app/services/user.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -13,10 +14,10 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  resolved(captchaResponse: string){
-    console.log('Resolved captcha with response ${captchaResponse}:');
-  }
-
+  public version = VERSION.full;
+  public reactiveForm: FormGroup = new FormGroup({
+      recaptchaReactive: new FormControl(null, Validators.required)
+  });
   userForm = this.formBuilder.group({// definir os campos do formulario
     pass: [null, [Validators.required, Validators.maxLength(50)]],
     email: [null, [Validators.required, Validators.email, Validators.maxLength(50)]],

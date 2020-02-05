@@ -1,7 +1,6 @@
 import { LayoutModule } from '@angular/cdk/layout';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -27,8 +26,8 @@ import { HomeComponent } from './home/home.component';
 import { RegistarComponent } from './registar/registar.component';
 import { ContactosComponent } from './contactos/contactos.component';
 import { EnviarMensagemComponent } from './enviar-mensagem/enviar-mensagem.component';
-import { RecaptchaModule } from 'ng-recaptcha';
-
+import { FormsModule, FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
+import { RecaptchaModule, RECAPTCHA_SETTINGS, RecaptchaSettings, RecaptchaFormsModule } from 'ng-recaptcha';
 
 /**
  * Build API configuration
@@ -51,7 +50,7 @@ function buildApiConfiguration() {
     HomeComponent,
     RegistarComponent,
     ContactosComponent,
-    EnviarMensagemComponent
+    EnviarMensagemComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,12 +70,16 @@ function buildApiConfiguration() {
     MatListModule,
     RecaptchaModule.forRoot(),
     ApiModule.forRoot(buildApiConfiguration),
-
+    FormsModule, 
+    RecaptchaModule,
+    RecaptchaFormsModule,
   ],
-  providers: [
-    // Hard-coded on API *Service classes but can be overriden here
-    { provide: BASE_PATH, useValue: environment.apiBaseUrl },
-  ],
+  providers: [{
+    provide: RECAPTCHA_SETTINGS,
+    useValue: {
+      siteKey: '6Ld9pdUUAAAAAF8kZHK66smeEKL21ZzmH7zgyUdE',
+    } as RecaptchaSettings,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

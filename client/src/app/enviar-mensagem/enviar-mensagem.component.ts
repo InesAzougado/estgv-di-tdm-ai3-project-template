@@ -11,5 +11,4 @@ export class EnviarMensagemComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

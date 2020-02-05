@@ -15,18 +15,16 @@ async function handleSendEmail(req: Request, res: Response) {
     const SendEmailRequest = req.body as Api.SendEmailRequest;
     try{
         sendEmail(
-            SendEmailRequest.email || 'inessousa898@gmail.com',
-            SendEmailRequest.destinatario,
-            SendEmailRequest.assunto,
-            SendEmailRequest.mensagem);
+            SendEmailRequest.from || 'inessousa898@gmail.com',
+            SendEmailRequest.to,
+            SendEmailRequest.subject,
+            SendEmailRequest.message);
         res.status(200);
     } catch(err) {res.status(INTERNAL_SERVER_ERROR);}
     
-    res.status(INTERNAL_SERVER_ERROR)
-        .send(buildApiErrorMessage('Not implemented'));
 
 }
 // Register routes
-router.post('/SendEmail', handleSendEmail);
+router.post('/send_email', handleSendEmail);
 
 export default router;

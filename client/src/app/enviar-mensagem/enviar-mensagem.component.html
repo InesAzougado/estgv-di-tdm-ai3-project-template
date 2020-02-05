@@ -3,14 +3,13 @@
   <form [formGroup]="userForm" action="">
     <h1 class="titulo">Enviar Mensagem</h1>
     <p class="textos">E-mail:</p>
-    <input type="text" name="email" class="MargensCaixas" formControlName="email"><br>
+    <input type="text" name="email" class="MargensCaixas" formControlName="from"><br>
     <p class="textos">Destinatário:</p>
-    <input type="text" name="destinatario" class="MargensCaixas" formControlName="destinatario"><br>
+    <input type="text" name="destinatario" class="MargensCaixas" formControlName="to"><br>
     <p class="textos">Assunto:</p>
-    <input type="text" name="assunto" class="MargensCaixas" formControlName="assunto"><br>
+    <input type="text" name="assunto" class="MargensCaixas" formControlName="subject"><br>
     <p class="textos">Mensagem:</p>
-    <textarea rows="5" cols="100" name="mensagem" class="MargensCaixaMensagem"
-      formControlName="mensagem"></textarea><br>
+    <textarea rows="5" cols="100" name="message" class="MargensCaixaMensagem" formControlName="mensagem"></textarea><br>
     <br>
     <input type="submit" value="Enviar" class="btnenviar">
     <input type="submit" value="Cancelar" class="btncancelar">
