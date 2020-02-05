@@ -9,25 +9,12 @@
   color: rgb(90, 90, 90);
 }
 
-.button {
-  background-color: #4CAF50;
-  /* Green */
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+.titulomapa {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  cursor: pointer;
-  outline: none;
+  color: rgb(90, 90, 90);
 }
 
-.btnsubmit {
+.btnenviar {
   background-color: rgb(255, 255, 255);
   color: rgb(90, 90, 90);
   border: 2px solid #ACE8C6;
@@ -38,9 +25,16 @@
   cursor: pointer;
 }
 
-.btnsubmit:hover {
+.btnenviar:hover {
   background-color: #ACE8C6;
   color: rgb(90, 90, 90);
+}
+
+.btnenviar:disabled {
+  background-color: rgb(255, 221, 221);
+  color: rgb(90, 90, 90);
+  border: 2px solid rgb(226, 114, 49);
+  outline: none;
 }
 
 .btncancelar {
@@ -66,12 +60,35 @@
   border: 1px solid #ACE8C6;
 }
 
+.MargensCaixaMensagem {
+  border: 1px solid #ACE8C6;
+}
+
 .textos {
   margin-bottom: 5px;
   color: rgb(90, 90, 90);
 }
 
+.contactos {
+  width: 370px;
+  height: 100px;
+  border: 0px;
+  margin-top: -400px;
+  margin-left: 800px;
+}
+
 input {
   padding-left: 10px;
   outline: none;
+}
+
+textarea {
+  padding-left: 10px;
+  padding-top: 5px;
+  outline: none;
+}
+
+.direita {
+  position: absolute;
+  right: 70px;
 }

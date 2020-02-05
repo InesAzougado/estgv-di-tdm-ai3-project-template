@@ -1,22 +1,24 @@
 <div class="divprincipal">
-  <h1 class="titulo">Registar Utilizador</h1>
-
-  <form [formGroup]="userForm" action="">
+  <form [formGroup]="registForm" #declarativeForm="ngForm">
+    <h1 class="titulo">Registar Utilizador</h1>
     <p class="textos">Nome:</p>
     <input type="text" name="nome" class="MargensCaixas" formControlName="nome"><br>
     <p class="textos">Apelido:</p>
     <input type="text" name="apelido" class="MargensCaixas" formControlName="apelido"><br>
     <p class="textos">Nome de Utilizador:</p>
-    <input type="text" name="nomeUtilizador" class="MargensCaixas" formControlName="nomeUtilizador"><br>
-    <p class="textos">E-mail:</p>
+    <input type="text" name="nomeUt" class="MargensCaixas" formControlName="nomeUt"><br>
+    <p class="textos">Email:</p>
     <input type="text" name="email" class="MargensCaixas" formControlName="email"><br>
     <p class="textos">Palavra-Passe:</p>
-    <input type="text" name="palavraPasse" class="MargensCaixas" formControlName="palavraPasse"><br>
+    <input type="text" name="pass" class="MargensCaixas" formControlName="pass"><br>
     <br>
-    <input type="submit" value="Registar" class="btnsubmit">
+    <form #declarativeForm="ngForm">
+      <re-captcha [(ngModel)]="declarativeFormCaptchaValue" name="captcha" required></re-captcha>
+    </form>
+    <br>
+    <input type="submit" value="Enviar" class="btnenviar" (click)="doSupport()" [disabled]="!declarativeForm.valid">
     <input type="submit" value="Cancelar" class="btncancelar">
-    <br>
-    <p class="textos">Clique em "Registar" para se registar como utilizador.</p>
+    <input type="reset" value="Limpar" class="btncancelar">
+    <p class="textos">Clique em "Enviar" para enviar a mensagem.</p>
   </form>
-
 </div>
