@@ -28,6 +28,7 @@ import { ContactosComponent } from './contactos/contactos.component';
 import { EnviarMensagemComponent } from './enviar-mensagem/enviar-mensagem.component';
 import { FormsModule, FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RecaptchaModule, RECAPTCHA_SETTINGS, RecaptchaSettings, RecaptchaFormsModule } from 'ng-recaptcha';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 /**
  * Build API configuration
@@ -73,6 +74,7 @@ function buildApiConfiguration() {
     FormsModule, 
     RecaptchaModule,
     RecaptchaFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [{
     provide: RECAPTCHA_SETTINGS,

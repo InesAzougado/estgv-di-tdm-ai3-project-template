@@ -44,12 +44,12 @@ export class EnviarMensagemComponent implements OnInit {
     )
   }
 
-  onSuccess(res: any) { // fazer o mesmo para lidar com erros
-    console.log('sucesso');
+  onSuccess(res: any) { // MSG DE SUCESSO
+    console.log('SUCESSO');
   }
 
-  onError(res: any) {// fazer o mesmo para lidar com erros
-    console.log('errouuuuuuuuuuuuuuuuuu')
+  onError(res: any) {// MSG DE ERRO
+    console.log('ERRO')
   }
 
 }
