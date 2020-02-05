@@ -33,12 +33,6 @@ export class EnviarMensagemComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  sendMail() {
-    const msg = this.userForm.value;
-    console.log(msg);
-
-  }
   doSupport() {
     const sendmail: SendEmailRequest = this.userForm.value;
     console.log(sendmail);
