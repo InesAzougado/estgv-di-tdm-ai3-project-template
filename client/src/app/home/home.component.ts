@@ -16,9 +16,9 @@ export class HomeComponent implements OnInit {
   }
 
   showNoti() {
-    const title = 'Bem vindo à pagina Inicio!';
+    const title = 'Bem vindo à página Inicio!';
     const options = new PushNotificationOptions();
-    options.body = 'Native Push Notification';
+    options.body = 'Consulte as informações do nosso Projeto';
  
     this._pushNotificationService.create(title, options).subscribe((notif) => {
       if (notif.event.type === 'show') {

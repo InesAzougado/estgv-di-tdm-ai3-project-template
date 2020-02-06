@@ -45,9 +45,9 @@ export class LoginComponent implements OnInit {
   }
 
   showNoti() {
-    const title = 'Bem vindo à pagina Login!';
+    const title = 'Bem vindo à página Login!';
     const options = new PushNotificationOptions();
-    options.body = 'Native Push Notification';
+    options.body = 'Faça Login na nossa página!';
  
     this._pushNotificationService.create(title, options).subscribe((notif) => {
       if (notif.event.type === 'show') {

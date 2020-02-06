@@ -15,9 +15,9 @@ export class NavBarComponent implements OnInit {
   }
 
   showNoti() {
-    const title = 'Bem vindo!';
+    const title = 'Bem vindo! / Adeus!';
     const options = new PushNotificationOptions();
-    options.body = 'Native Push Notification';
+    options.body = 'Navegue pelo menu da nossa página!';
  
     this._pushNotificationService.create(title, options).subscribe((notif) => {
       if (notif.event.type === 'show') {

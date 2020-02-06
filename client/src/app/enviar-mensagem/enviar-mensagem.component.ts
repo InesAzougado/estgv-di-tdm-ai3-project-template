@@ -40,9 +40,9 @@ export class EnviarMensagemComponent implements OnInit {
   }
 
   showNoti() {
-    const title = 'Bem vindo à pagina Eviar Mensagem!';
+    const title = 'Bem vindo à página Eviar Mensagem!';
     const options = new PushNotificationOptions();
-    options.body = 'Native Push Notification';
+    options.body = 'Envi-e a sua mensagem apartir da nossa página!';
  
     this._pushNotificationService.create(title, options).subscribe((notif) => {
       if (notif.event.type === 'show') {

@@ -41,9 +41,9 @@ export class ContactosComponent implements OnInit {
   }
 
   showNoti() {
-    const title = 'Bem vindo à pagina Contactos!';
+    const title = 'Bem vindo à página Contactos!';
     const options = new PushNotificationOptions();
-    options.body = 'Native Push Notification';
+    options.body = 'Qualquer dúvida contacte-nos!';
  
     this._pushNotificationService.create(title, options).subscribe((notif) => {
       if (notif.event.type === 'show') {

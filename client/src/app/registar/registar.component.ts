@@ -40,9 +40,9 @@ export class RegistarComponent implements OnInit {
   }
 
   showNoti() {
-    const title = 'Bem vindo!';
+    const title = 'Bem vindo à página de registo!';
     const options = new PushNotificationOptions();
-    options.body = 'Native Push Notification';
+    options.body = 'Registe-se na nossa plataforma';
  
     this._pushNotificationService.create(title, options).subscribe((notif) => {
       if (notif.event.type === 'show') {
