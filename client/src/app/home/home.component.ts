@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PushNotificationOptions, PushNotificationService } from 'ngx-push-notifications';
+
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _pushNotificationService: PushNotificationService) { }
 
   ngOnInit() {
+    this._pushNotificationService.requestPermission();
+    this.showNoti();
   }
+
+  showNoti() {
+    const title = 'Bem vindo à pagina Inicio!';
+    const options = new PushNotificationOptions();
+    options.body = 'Native Push Notification';
+ 
+    this._pushNotificationService.create(title, options).subscribe((notif) => {
+      if (notif.event.type === 'show') {
+        console.log('onshow');
+        setTimeout(() => {
+          notif.notification.close();
+        }, 3000);
+      }
+      if (notif.event.type === 'click') {
+        console.log('click');
+        notif.notification.close();
+      }
+      if (notif.event.type === 'close') {
+        console.log('close');
+      }
+    },
+    (err) => {
+         console.log(err);
+    });
+}
 
 }

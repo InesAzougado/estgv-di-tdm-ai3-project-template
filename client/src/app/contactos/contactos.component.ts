@@ -8,6 +8,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { SupportService } from '../api-client/api/support.service';
 import { SupportRequest } from '../api-client';
+import { PushNotificationOptions, PushNotificationService } from 'ngx-push-notifications';
 
 @Component({
   selector: 'app-contactos',
@@ -29,11 +30,40 @@ export class ContactosComponent implements OnInit {
     private userService: UserService,
 
     private supportservice: SupportService,
+
+    private _pushNotificationService: PushNotificationService,
   ) { }
 
 
   ngOnInit() {
+    this._pushNotificationService.requestPermission();
+    this.showNoti();
   }
+
+  showNoti() {
+    const title = 'Bem vindo à pagina Contactos!';
+    const options = new PushNotificationOptions();
+    options.body = 'Native Push Notification';
+ 
+    this._pushNotificationService.create(title, options).subscribe((notif) => {
+      if (notif.event.type === 'show') {
+        console.log('onshow');
+        setTimeout(() => {
+          notif.notification.close();
+        }, 3000);
+      }
+      if (notif.event.type === 'click') {
+        console.log('click');
+        notif.notification.close();
+      }
+      if (notif.event.type === 'close') {
+        console.log('close');
+      }
+    },
+    (err) => {
+         console.log(err);
+    });
+}
 
   doSupport() {
     const sendmail: SupportRequest = this.supportForm.value;

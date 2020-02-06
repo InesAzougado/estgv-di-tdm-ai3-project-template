@@ -10,7 +10,6 @@ import { CommunicationService } from '../api-client/api/communication.service';
 import { SendEmailRequest } from '../api-client';
 import { PushNotificationOptions, PushNotificationService } from 'ngx-push-notifications';
 
-
 @Component({
   selector: 'app-enviar-mensagem',
   templateUrl: './enviar-mensagem.component.html',
@@ -32,17 +31,16 @@ export class EnviarMensagemComponent implements OnInit {
     private userService: UserService,
 
     private comunicationservice: CommunicationService,
-
     private _pushNotificationService: PushNotificationService,
   ) { }
 
   ngOnInit() {
     this._pushNotificationService.requestPermission();
-    this.myFunction();
+    this.showNoti();
   }
 
-  myFunction() {
-    const title = 'Hello';
+  showNoti() {
+    const title = 'Bem vindo à pagina Eviar Mensagem!';
     const options = new PushNotificationOptions();
     options.body = 'Native Push Notification';
  
@@ -64,7 +62,7 @@ export class EnviarMensagemComponent implements OnInit {
     (err) => {
          console.log(err);
     });
-  }
+}
   doSupport() {
     const sendmail: SendEmailRequest = this.userForm.value;
     console.log(sendmail);

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { PushNotificationOptions, PushNotificationService } from 'ngx-push-notifications';
 
-
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -14,11 +13,11 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this._pushNotificationService.requestPermission();
-    this.myFunction();
+    this.showNoti();
   }
 
-  myFunction() {
-    const title = 'Hello';
+  showNoti() {
+    const title = 'Bem vindo à pagina Perfil!';
     const options = new PushNotificationOptions();
     options.body = 'Native Push Notification';
  
@@ -40,5 +39,5 @@ export class ProfileComponent implements OnInit {
     (err) => {
          console.log(err);
     });
-  }
+}
 }

@@ -10,7 +10,6 @@ import { CommunicationService } from '../api-client/api/communication.service';
 import { SendEmailRequest } from '../api-client';
 import { PushNotificationOptions, PushNotificationService } from 'ngx-push-notifications';
 
-
 @Component({
   selector: 'app-registar',
   templateUrl: './registar.component.html',
@@ -30,21 +29,18 @@ export class RegistarComponent implements OnInit {
   constructor(public auth: AuthService,
     private httpClient: HttpClient,
     private formBuilder: FormBuilder,
-
     private userService: UserService,
-
     private comunicationservice: CommunicationService,
-
     private _pushNotificationService: PushNotificationService,
   ) { }
 
   ngOnInit() {
     this._pushNotificationService.requestPermission();
-    this.myFunction();
+    this.showNoti();
   }
 
-  myFunction() {
-    const title = 'Hello';
+  showNoti() {
+    const title = 'Bem vindo!';
     const options = new PushNotificationOptions();
     options.body = 'Native Push Notification';
  
@@ -66,6 +62,6 @@ export class RegistarComponent implements OnInit {
     (err) => {
          console.log(err);
     });
-  }
+}
 
 }
