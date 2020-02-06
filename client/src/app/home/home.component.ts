@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PushNotificationOptions, PushNotificationService } from 'ngx-push-notifications';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
