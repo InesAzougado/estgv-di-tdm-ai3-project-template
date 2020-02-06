@@ -29,6 +29,7 @@ import { EnviarMensagemComponent } from './enviar-mensagem/enviar-mensagem.compo
 import { FormsModule, FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RecaptchaModule, RECAPTCHA_SETTINGS, RecaptchaSettings, RecaptchaFormsModule } from 'ng-recaptcha';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { PushNotificationService } from 'ngx-push-notifications';
 
 /**
  * Build API configuration
@@ -81,7 +82,7 @@ export function buildApiConfiguration() {
     useValue: {
       siteKey: '6Ld9pdUUAAAAAF8kZHK66smeEKL21ZzmH7zgyUdE',
     } as RecaptchaSettings,
-  }],
+  },PushNotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
