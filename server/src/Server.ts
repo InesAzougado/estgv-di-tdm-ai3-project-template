@@ -135,5 +135,14 @@ app.use(handleInvalidApiEndpoint); // Will never be called because of the previo
 
 app.use(handleError);
 
+const cors = require('cors')
+var corsOptions = {
+  "origin": "*",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false,
+  "optionsSuccessStatus": 204
+}
+app.use(cors(corsOptions))
+
 // Export express instance
 export default app;

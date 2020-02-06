@@ -14,6 +14,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
+  public declarativeFormCaptchaValue;
   public version = VERSION.full;
 
   userForm = this.formBuilder.group({// definir os campos do formulario
@@ -39,7 +40,7 @@ export class LoginComponent implements OnInit {
 
   }
 
-  public doLogin(event: Event) {
+  public doLogin() {
     const loginRequest: LoginRequest = {
       email: "email",
       password: "password"

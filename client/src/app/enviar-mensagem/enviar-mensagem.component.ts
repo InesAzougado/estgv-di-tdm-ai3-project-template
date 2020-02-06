@@ -16,6 +16,8 @@ import { SendEmailRequest } from '../api-client';
   styleUrls: ['./enviar-mensagem.component.scss']
 })
 export class EnviarMensagemComponent implements OnInit {
+
+  public declarativeFormCaptchaValue;
   userForm = this.formBuilder.group({
     from: [null, [Validators.required, Validators.email, Validators.maxLength(50)]],
     to: [null, [Validators.required, Validators.email, Validators.maxLength(50)]],

@@ -17,6 +17,8 @@ import { SendEmailRequest } from '../api-client';
 })
 export class RegistarComponent implements OnInit {
 
+  public declarativeFormCaptchaValue;
+
   registForm = this.formBuilder.group({
     nome: [null, [Validators.required, Validators.maxLength(50)]],
     apelido: [null, [Validators.required, Validators.maxLength(50)]],

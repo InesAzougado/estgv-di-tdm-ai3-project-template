@@ -16,6 +16,7 @@ import { SupportRequest } from '../api-client';
 })
 export class ContactosComponent implements OnInit {
 
+  public declarativeFormCaptchaValue;
   supportForm = this.formBuilder.group({
     email: [null, [Validators.required, Validators.email, Validators.maxLength(50)]],
     subject: [null, [Validators.required, Validators.maxLength(50)]],
