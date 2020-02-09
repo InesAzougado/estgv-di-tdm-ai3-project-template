@@ -26,5 +26,9 @@
     <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
     <code class="textos2">{{profile.updated_at}}</code>
   </pre>
+    <p class="textos"><b>Atualizado em</b></p>
+    <pre class="dados" *ngIf="auth.userProfile$ | async as profile">
+    <code class="textos2">{{profile.updated_at}}</code>
+  </pre>
   </div>
 </div>
